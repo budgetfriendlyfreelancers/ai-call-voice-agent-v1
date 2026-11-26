@@ -4,3 +4,6 @@
 /tests/local.php
 /.env
 /verification/node_modules/
+*.[pP][nN][gG]
+*.[jJ][pP][gG]
+*.[jJ][pP][eE][gG]

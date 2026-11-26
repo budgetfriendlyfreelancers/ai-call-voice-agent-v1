@@ -1,0 +1,62 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : 26 November 2026 08:06:45
+   Source : D:\My-Projects\Ai-Call-Voice-Agent\
+     Dest : C:\wamp64\www\voiceshop\
+
+    Files : *.*
+	    
+ Exc Dirs : .git
+	    verification
+	    node_modules
+	    storage
+	    
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /R:1 /W:1 
+
+------------------------------------------------------------------------------
+
+	                   7	D:\My-Projects\Ai-Call-Voice-Agent\
+	    Newer     		     133	.gitignore100%  
+	    Newer     		   12638	RUN2.md100%  
+	                   2	D:\My-Projects\Ai-Call-Voice-Agent\config\
+	                   2	D:\My-Projects\Ai-Call-Voice-Agent\config\shops\
+	                   2	D:\My-Projects\Ai-Call-Voice-Agent\database\
+	                   1	D:\My-Projects\Ai-Call-Voice-Agent\database\migrations\
+	                   3	D:\My-Projects\Ai-Call-Voice-Agent\public\
+	                   0	D:\My-Projects\Ai-Call-Voice-Agent\public\assets\
+	                   1	D:\My-Projects\Ai-Call-Voice-Agent\public\assets\css\
+	                   1	D:\My-Projects\Ai-Call-Voice-Agent\public\assets\js\
+	                   1	D:\My-Projects\Ai-Call-Voice-Agent\public\webhook\
+	                   0	D:\My-Projects\Ai-Call-Voice-Agent\src\
+	                   6	D:\My-Projects\Ai-Call-Voice-Agent\src\Config\
+	                   2	D:\My-Projects\Ai-Call-Voice-Agent\src\Db\
+	                   1	D:\My-Projects\Ai-Call-Voice-Agent\src\Domain\
+	                   4	D:\My-Projects\Ai-Call-Voice-Agent\src\Http\
+	                   1	D:\My-Projects\Ai-Call-Voice-Agent\src\Language\
+	                   5	D:\My-Projects\Ai-Call-Voice-Agent\src\Repository\
+	                   8	D:\My-Projects\Ai-Call-Voice-Agent\src\Service\
+	                   4	D:\My-Projects\Ai-Call-Voice-Agent\src\Voice\
+	                   5	D:\My-Projects\Ai-Call-Voice-Agent\src\Webhook\
+	                   6	D:\My-Projects\Ai-Call-Voice-Agent\tests\
+	    Newer     		   11912	http_tests.php100%  
+	                   2	D:\My-Projects\Ai-Call-Voice-Agent\tests\Support\
+	                   7	D:\My-Projects\Ai-Call-Voice-Agent\views\
+	  New Dir          1	D:\My-Projects\Ai-Call-Voice-Agent\webhook-public\
+	    New File  		     814	index.php100%  
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :        27         1        26         0         0         0
+   Files :        72         4        68         0         0         0
+   Bytes :   215.1 k    24.8 k   190.2 k         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   Speed :             1019880 Bytes/sec.
+   Speed :              58.358 MegaBytes/min.
+   Ended : 26 November 2026 08:06:46
+

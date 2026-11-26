@@ -91,7 +91,7 @@ Migration output: ${read('migration.txt').trim()} Native JSON columns, FK and un
 7. Signed unknown-agent and non-transcription events are logged and acknowledged with 200, without audit/orders. Failed validation rolls back both rows so a corrected replay can succeed.
 8. Transcript must fit TEXT (65,535 bytes); signed body limit is 2 MiB. Payload/extraction JSON preserves values, not original formatting/key order.
 9. Voice synthesis remains in the hosted ElevenLabs agent. Standalone server TTS is unused. Real account creation, voice selection, public tunnel and real conversation were explicitly user-only steps and were not performed.
-10. Tunnel instructions were corrected for the actual /public path. Tunnel to 127.0.0.1:8087 and use /webhook/elevenlabs.php, or tunnel to Apache's origin and use /voiceshop/public/webhook/elevenlabs.php.
+10. Superseded by the webhook isolation fix: tunnel ONLY to 127.0.0.1:8088, using /webhook/elevenlabs.php. NEVER tunnel Apache or port 8087. See RUN2.md for the required dedicated router command.
 
 The first audit assertion compared associative JSON key order; MySQL canonicalizes native JSON objects. The test was corrected to compare values semantically, then passed on both servers. No payload data was lost.
 

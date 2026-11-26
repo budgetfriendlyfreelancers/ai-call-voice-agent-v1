@@ -22,7 +22,7 @@ The simulator is intentionally CLI-only and localhost-only; it cannot become a p
 | Grocery Tamil voices | `config/shops/grocery_store_02.json` | Replace `REPLACE_WITH_VOICE_ID_TA_F_2` and `REPLACE_WITH_VOICE_ID_TA_M_2`. |
 | Grocery English voices | Same grocery JSON | Replace `REPLACE_WITH_VOICE_ID_EN_F_2` and `REPLACE_WITH_VOICE_ID_EN_M_2`. |
 | Hosted agent settings | ElevenLabs account | Set a Tamil-capable voice, persona, first message and the data collection fields below. Local JSON edits do not automatically update a hosted agent. |
-| Webhook destination | ElevenLabs account | Use the complete reachable `/webhook/elevenlabs.php` URL, including any Apache path prefix. |
+| Webhook destination | ElevenLabs account | Use `https://<tunnel-host>/webhook/elevenlabs.php`, with the tunnel targeting only port 8088. |
 
 No API key is needed to verify a webhook or run the local simulator. `elevenlabs_api_key` remains unused by this path. Config Health reports secret presence only (never its value), mappings, validation errors and unusable voice placeholders.
 
@@ -73,23 +73,55 @@ Call insert, order, items and status history share one PDO transaction. Invalid 
 
 1. Create/configure your hosted ElevenLabs agent and test its Tamil voice. Apply persona/greeting and the extraction contract above.
 2. Fill the real IDs and secret in the TODO table. Keep the two local deployment copies consistent.
-3. Expose the intended local origin yourself. For the built-in server, tunnel to `http://127.0.0.1:8087`, then use `https://<tunnel-host>/webhook/elevenlabs.php`. For Apache tunneled to `http://localhost`, use `https://<tunnel-host>/voiceshop/public/webhook/elevenlabs.php`. Do not omit `/public` or duplicate the origin path prefix.
-4. Configure that complete URL as the ElevenLabs post-call webhook, enable HMAC authentication, and use its signing secret locally. Enable provider retries if desired.
-5. Make a real test conversation, then review/approve the unapproved order in the dashboard. A real account, tunnel and call were not created by the coding agent.
+3. Start the dedicated webhook server below and expose **only port 8088** using one of the tunnel commands. Configure `https://<tunnel-host>/webhook/elevenlabs.php` as the ElevenLabs post-call webhook, enable HMAC authentication, and use its signing secret locally. Enable provider retries if desired.
+4. Make a real test conversation, then review/approve the unapproved order in the local dashboard. Real account setup, public tunnel launch and a real call remain user-only steps.
 
-The task's proposed tunnel-to-`/voiceshop` followed by `/webhook/elevenlabs.php` does not match this project's `public/` deployment layout. The origin/path examples above correct that mismatch. Local simulation proves the receiving path; it does not prove your account's voice, extraction quality or webhook delivery settings.
+## Local servers and public webhook tunnel
+
+> **WARNING:** The Wamp Apache app (`http://localhost/voiceshop/public`) and PHP server on port **8087** are LOCAL-ONLY and must **NEVER** be tunneled. Tunneling those full-app ports exposes the dashboard and Config Health page. **8088 is the only permitted tunnel target; never target any other port.**
+
+Run from `D:/My-Projects/Ai-Call-Voice-Agent` in PowerShell. Wamp manages the existing Apache service; if stopped, start it from Wamp or an elevated PowerShell:
+
+```powershell
+Start-Service wampapache64
+# Existing full app, local only; leave it running if already started:
+& C:/wamp64/bin/php/php8.2.30/php.exe -d xdebug.mode=off -S 127.0.0.1:8087 -t public
+# Separate terminal: dedicated webhook-only server (router argument is REQUIRED):
+& C:/wamp64/bin/php/php8.2.30/php.exe -d xdebug.mode=off -S 127.0.0.1:8088 -t webhook-public webhook-public/index.php
+```
+
+Both PHP servers bind IPv4 loopback so they are not reachable from the LAN. The tunnel runs on this same machine and targets that same address (equivalent to localhost:8088 without IPv6 ambiguity). Choose one tunnel command in another terminal:
+
+```powershell
+cloudflared tunnel --url http://127.0.0.1:8088
+# Or:
+ngrok http http://127.0.0.1:8088
+```
+
+Only `POST /webhook/elevenlabs.php` is accepted on 8088. All other paths return generic 404 JSON, including dashboard, Health, owner login, setup, import, assets, and the router filename. Other methods on the webhook path return 405. The router never falls through to static files and delegates the accepted request to the original webhook entry; signature verification and intake are shared. Do not omit the final router argument from the server command.
+
+```text
+webhook-public/
+`-- index.php
+```
+
+Local simulation verifies the receiver, not real voice quality or provider delivery. Run `php tests/simulate_webhook.php http://127.0.0.1:8088` for complete, missing-address and replay cases. The original Apache and 8087 webhook endpoints remain available for local regression checks only.
 
 ## Tests
 
 ```text
 php tests/run_tests.php --integration
-php tests/http_tests.php http://127.0.0.1:8087
-php tests/http_tests.php http://localhost/voiceshop/public
+php tests/http_tests.php http://127.0.0.1:8087 http://127.0.0.1:8088
+php tests/http_tests.php http://localhost/voiceshop/public http://127.0.0.1:8088
 php tests/webhook_tests.php http://127.0.0.1:8087
 php tests/webhook_tests.php http://localhost/voiceshop/public
 php tests/simulate_webhook.php http://127.0.0.1:8087
 php tests/simulate_webhook.php http://localhost/voiceshop/public
-node verification/mobile-check.js both
+php tests/webhook_tests.php http://127.0.0.1:8088
+php tests/simulate_webhook.php http://127.0.0.1:8088
+node verification/mobile-check.js both isolation
 ```
 
 Run the Apache HTTP test script from the deployed copy (`C:/wamp64/www/voiceshop/tests/http_tests.php`) because one existing test creates a temporary broken config beside the runner. Other scripts can run from either copy when private environment settings agree. The Node dependency is verification-only; the PHP application has no Node requirement. Run 2 evidence is under `verification/run2/`, leaving Run 1 screenshots/report untouched.
+
+The HTTP suite retains the original 23 checks and adds 40 isolation checks (63 total per original app server). Start all three servers before running it. Isolation evidence and the full named check report are in `verification/isolation/REPORT.md`.

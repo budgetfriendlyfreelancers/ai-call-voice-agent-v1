@@ -3,7 +3,7 @@ const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 const assert = require('assert/strict');
-const root = path.join(__dirname, 'run2');
+const root = path.join(__dirname, process.argv[3] || 'run2');
 fs.mkdirSync(path.join(root, 'logs'), {recursive:true});
 fs.mkdirSync(path.join(root, 'screenshots'), {recursive:true});
 const ua = 'Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36';

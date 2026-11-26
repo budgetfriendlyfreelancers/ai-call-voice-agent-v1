@@ -67,7 +67,38 @@ try {
     $rawMissing=json_encode(ElevenLabsFixture::make($agent,$prefix.'-webhook-missing',true),JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR);
     [$code,$body]=$client->raw($rawMissing); $o=(new OrderRepository($db))->byCall($prefix.'-webhook-missing'); if ($o) $ids[]=(int)$o['id'];
     verify('Webhook missing address creates NEEDS_DETAILS', $code===200 && $o && $o['status']==='NEEDS_DETAILS' && in_array('address.street',json_decode($o['missing_fields_json'],true),true));
+    $isolatedBase = $argv[2] ?? 'http://127.0.0.1:8088';
+    $isolatedClient = new WebhookClient($isolatedBase, (new \VoiceShop\Config\WebhookSettings($env))->secret());
+    $blocked = ['/', '/index.php', '/index.php?page=health', '/index.php?page=owner',
+        '/index.php?page=detail&id=1', '/index.php?shop=grocery_store_02', '/import.php', '/setup.php',
+        '/assets/css/app.css', '/assets/js/import.js', '/public/index.php', '/config/env.php',
+        '/../public/index.php', '/%2e%2e/public/index.php', '/webhook/elevenlabs.php/extra',
+        '/webhook/%65levenlabs.php', '//webhook/elevenlabs.php', '/unknown'];
+    foreach ($blocked as $path) {
+        foreach (['GET', 'POST'] as $method) {
+            $ch=curl_init($isolatedBase.$path);
+            curl_setopt_array($ch,[CURLOPT_RETURNTRANSFER=>true,CURLOPT_FOLLOWLOCATION=>false,
+                CURLOPT_TIMEOUT=>15,CURLOPT_PATH_AS_IS=>true,CURLOPT_CUSTOMREQUEST=>$method]);
+            $response=curl_exec($ch); $status=curl_getinfo($ch,CURLINFO_HTTP_CODE); curl_close($ch);
+            verify("Isolated $method $path returns generic 404", $status===404 && json_decode((string)$response,true)===['error'=>'not_found']);
+        }
+    }
+    $ch=curl_init($isolatedBase.'/webhook/elevenlabs.php');
+    curl_setopt_array($ch,[CURLOPT_RETURNTRANSFER=>true,CURLOPT_TIMEOUT=>15]);
+    $response=curl_exec($ch); $status=curl_getinfo($ch,CURLINFO_HTTP_CODE); curl_close($ch);
+    verify('Isolated webhook GET returns 405', $status===405 && json_decode((string)$response,true)===['error'=>'method_not_allowed']);
+    $isolatedRaw=json_encode(ElevenLabsFixture::make($agent,$prefix.'-isolated'),JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR);
+    [$code,$body]=$isolatedClient->raw($isolatedRaw,'');
+    verify('Isolated missing signature returns 401', $code===401 && json_decode($body,true)===['error'=>'unauthorized']);
+    [$code,$body]=$isolatedClient->raw($isolatedRaw,'t='.time().',v0='.str_repeat('0',64));
+    verify('Isolated bad signature returns 401', $code===401 && json_decode($body,true)===['error'=>'unauthorized']);
+    [$code,$body]=$isolatedClient->raw($isolatedRaw);
+    $o=(new OrderRepository($db))->byCall($prefix.'-isolated');
+    $call=(new \VoiceShop\Repository\CallRepository($db))->byCall($prefix.'-isolated');
+    verify('Isolated signed webhook returns 200 with audit and draft order', $code===200 && json_decode($body,true)===['ok'=>true] && $call && $o && $o['status']==='AWAITING_MERCHANT_APPROVAL');
 } finally {
+    $db->prepare('DELETE FROM calls WHERE call_id=?')->execute([$prefix.'-isolated']);
+    $db->prepare('DELETE FROM orders WHERE call_id=?')->execute([$prefix.'-isolated']);
     $db->prepare('DELETE FROM calls WHERE call_id IN (?,?)')->execute([$prefix.'-webhook',$prefix.'-webhook-missing']);
     foreach ($ids as $id) { $db->prepare('DELETE FROM orders WHERE id=? AND call_id LIKE ?')->execute([$id,$prefix.'%']); }
     unlink($cookie);

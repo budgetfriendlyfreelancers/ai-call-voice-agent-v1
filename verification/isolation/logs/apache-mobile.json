@@ -1,0 +1,724 @@
+{
+  "name": "apache",
+  "base": "http://localhost/voiceshop/public",
+  "browser": "157.0.8103.79",
+  "viewport": "390x844 @2x",
+  "checks": [
+    {
+      "name": "owner-login",
+      "url": "http://localhost/voiceshop/public/index.php",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": [],
+      "navTargets": [
+        {
+          "text": "Orders",
+          "width": 50.5,
+          "height": 44
+        },
+        {
+          "text": "Import",
+          "width": 52.484375,
+          "height": 44
+        },
+        {
+          "text": "Config Health",
+          "width": 104.375,
+          "height": 44
+        },
+        {
+          "text": "Setup",
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "order-list",
+      "url": "http://localhost/voiceshop/public/index.php",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": [],
+      "navTargets": [
+        {
+          "text": "Orders",
+          "width": 50.5,
+          "height": 44
+        },
+        {
+          "text": "Import",
+          "width": 52.484375,
+          "height": 44
+        },
+        {
+          "text": "Config Health",
+          "width": 104.375,
+          "height": 44
+        },
+        {
+          "text": "Setup",
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "existing-detail",
+      "url": "http://localhost/voiceshop/public/index.php?page=detail&id=92",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": [],
+      "navTargets": [
+        {
+          "text": "Orders",
+          "width": 50.5,
+          "height": 44
+        },
+        {
+          "text": "Import",
+          "width": 52.484375,
+          "height": 44
+        },
+        {
+          "text": "Config Health",
+          "width": 104.375,
+          "height": 44
+        },
+        {
+          "text": "Setup",
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "complete-import-form",
+      "url": "http://localhost/voiceshop/public/import.php",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": [],
+      "navTargets": [
+        {
+          "text": "Orders",
+          "width": 50.5,
+          "height": 44
+        },
+        {
+          "text": "Import",
+          "width": 52.484375,
+          "height": 44
+        },
+        {
+          "text": "Config Health",
+          "width": 104.375,
+          "height": 44
+        },
+        {
+          "text": "Setup",
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "complete-import-result",
+      "url": "http://localhost/voiceshop/public/import.php",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": [],
+      "navTargets": [
+        {
+          "text": "Orders",
+          "width": 50.5,
+          "height": 44
+        },
+        {
+          "text": "Import",
+          "width": 52.484375,
+          "height": 44
+        },
+        {
+          "text": "Config Health",
+          "width": 104.375,
+          "height": 44
+        },
+        {
+          "text": "Setup",
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "new-order-listed",
+      "url": "http://localhost/voiceshop/public/index.php",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": [],
+      "navTargets": [
+        {
+          "text": "Orders",
+          "width": 50.5,
+          "height": 44
+        },
+        {
+          "text": "Import",
+          "width": 52.484375,
+          "height": 44
+        },
+        {
+          "text": "Config Health",
+          "width": 104.375,
+          "height": 44
+        },
+        {
+          "text": "Setup",
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "needs-details-list",
+      "url": "http://localhost/voiceshop/public/index.php",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": [],
+      "navTargets": [
+        {
+          "text": "Orders",
+          "width": 50.5,
+          "height": 44
+        },
+        {
+          "text": "Import",
+          "width": 52.484375,
+          "height": 44
+        },
+        {
+          "text": "Config Health",
+          "width": 104.375,
+          "height": 44
+        },
+        {
+          "text": "Setup",
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "needs-details-highlight",
+      "url": "http://localhost/voiceshop/public/index.php?page=detail&id=94",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": [],
+      "navTargets": [
+        {
+          "text": "Orders",
+          "width": 50.5,
+          "height": 44
+        },
+        {
+          "text": "Import",
+          "width": 52.484375,
+          "height": 44
+        },
+        {
+          "text": "Config Health",
+          "width": 104.375,
+          "height": 44
+        },
+        {
+          "text": "Setup",
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "wrong-pin-rejected",
+      "url": "http://localhost/voiceshop/public/index.php?page=owner",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": [],
+      "navTargets": [
+        {
+          "text": "Orders",
+          "width": 50.5,
+          "height": 44
+        },
+        {
+          "text": "Import",
+          "width": 52.484375,
+          "height": 44
+        },
+        {
+          "text": "Config Health",
+          "width": 104.375,
+          "height": 44
+        },
+        {
+          "text": "Setup",
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "still-unapproved",
+      "url": "http://localhost/voiceshop/public/index.php?page=detail&id=93",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": [],
+      "navTargets": [
+        {
+          "text": "Orders",
+          "width": 50.5,
+          "height": 44
+        },
+        {
+          "text": "Import",
+          "width": 52.484375,
+          "height": 44
+        },
+        {
+          "text": "Config Health",
+          "width": 104.375,
+          "height": 44
+        },
+        {
+          "text": "Setup",
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "approved",
+      "url": "http://localhost/voiceshop/public/index.php?page=detail&id=93&saved=1",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": [],
+      "navTargets": [
+        {
+          "text": "Orders",
+          "width": 50.5,
+          "height": 44
+        },
+        {
+          "text": "Import",
+          "width": 52.484375,
+          "height": 44
+        },
+        {
+          "text": "Config Health",
+          "width": 104.375,
+          "height": 44
+        },
+        {
+          "text": "Setup",
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "approved-history",
+      "url": "http://localhost/voiceshop/public/index.php?page=detail&id=93",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": [],
+      "navTargets": [
+        {
+          "text": "Orders",
+          "width": 50.5,
+          "height": 44
+        },
+        {
+          "text": "Import",
+          "width": 52.484375,
+          "height": 44
+        },
+        {
+          "text": "Config Health",
+          "width": 104.375,
+          "height": 44
+        },
+        {
+          "text": "Setup",
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "health-mobile",
+      "url": "http://localhost/voiceshop/public/index.php?page=health",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": [],
+      "navTargets": [
+        {
+          "text": "Orders",
+          "width": 50.5,
+          "height": 44
+        },
+        {
+          "text": "Import",
+          "width": 52.484375,
+          "height": 44
+        },
+        {
+          "text": "Config Health",
+          "width": 104.375,
+          "height": 44
+        },
+        {
+          "text": "Setup",
+          "width": 44,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "name": "health-desktop",
+      "url": "http://localhost/voiceshop/public/index.php?page=health",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "offenders": []
+    }
+  ],
+  "screenshots": [
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\isolation\\screenshots\\01-apache-owner-login.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\isolation\\screenshots\\02-apache-order-list.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\isolation\\screenshots\\03-apache-existing-detail.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\isolation\\screenshots\\04-apache-complete-import-form.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\isolation\\screenshots\\05-apache-complete-import-result.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\isolation\\screenshots\\06-apache-new-order-listed.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\isolation\\screenshots\\07-apache-needs-details-list.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\isolation\\screenshots\\08-apache-needs-details-highlight.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\isolation\\screenshots\\09-apache-wrong-pin-rejected.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\isolation\\screenshots\\10-apache-still-unapproved.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\isolation\\screenshots\\11-apache-approved.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\isolation\\screenshots\\12-apache-approved-history.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\isolation\\screenshots\\13-apache-health-mobile.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\isolation\\screenshots\\14-apache-health-desktop.png"
+  ],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 422 (Unprocessable Entity)"
+  ],
+  "failedRequests": [],
+  "errorResponses": [
+    {
+      "status": 422,
+      "url": "http://localhost/voiceshop/public/index.php?page=owner"
+    }
+  ],
+  "responses": [
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 302,
+      "url": "http://localhost/voiceshop/public/index.php?page=owner"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/index.php?page=detail&id=92"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/import.php"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/js/import.js"
+    },
+    {
+      "status": 201,
+      "url": "http://localhost/voiceshop/public/import.php"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/js/import.js"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/index.php?page=detail&id=93"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/import.php"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/js/import.js"
+    },
+    {
+      "status": 201,
+      "url": "http://localhost/voiceshop/public/import.php"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/js/import.js"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/index.php?page=detail&id=94"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 302,
+      "url": "http://localhost/voiceshop/public/index.php?page=owner"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/index.php?page=detail&id=93"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 422,
+      "url": "http://localhost/voiceshop/public/index.php?page=owner"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/index.php?page=detail&id=93"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 302,
+      "url": "http://localhost/voiceshop/public/index.php?page=owner"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/index.php?page=detail&id=93"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 302,
+      "url": "http://localhost/voiceshop/public/index.php?page=detail&id=93"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/index.php?page=detail&id=93&saved=1"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/index.php?page=detail&id=93"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/index.php?page=health"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost/voiceshop/public/assets/css/app.css"
+    }
+  ],
+  "tapTargets": [],
+  "orders": {
+    "good": {
+      "call_id": "VERIFY-apache-1795660886714-GOOD",
+      "customer": "Verification apache 1795660886714",
+      "phone": "0000886714",
+      "id": 93
+    },
+    "missing": {
+      "call_id": "VERIFY-apache-1795660886714-MISSING",
+      "customer": "Missing apache 1795660886714",
+      "id": 94
+    }
+  },
+  "missingFields": "Missing\nphone\naddress.house_no\naddress.street\naddress.area\naddress.pincode",
+  "missingStyles": [
+    {
+      "name": "customer[phone]",
+      "className": "missing",
+      "border": "rgb(183, 80, 45)",
+      "background": "rgb(255, 245, 235)"
+    },
+    {
+      "name": "customer[address][house_no]",
+      "className": "missing",
+      "border": "rgb(183, 80, 45)",
+      "background": "rgb(255, 245, 235)"
+    },
+    {
+      "name": "customer[address][street]",
+      "className": "missing",
+      "border": "rgb(183, 80, 45)",
+      "background": "rgb(255, 245, 235)"
+    },
+    {
+      "name": "customer[address][area]",
+      "className": "missing",
+      "border": "rgb(183, 80, 45)",
+      "background": "rgb(255, 245, 235)"
+    },
+    {
+      "name": "customer[address][pincode]",
+      "className": "missing",
+      "border": "rgb(183, 80, 45)",
+      "background": "rgb(255, 245, 235)"
+    }
+  ],
+  "history": "Status history\n\nDraft → Awaiting Merchant Approval\n2026-11-26 08:12:04 · system/webhook-sim\n\nAwaiting Merchant Approval → Confirmed\n2026-11-26 08:13:04 · owner",
+  "health": "Config Health\n\nFiles are the source of truth. Each load is validated; partial languages fall back per key.\n\nElevenLabs webhook\n\nSigning secret: Configured (value hidden).\n\nEndpoint: webhook/elevenlabs.php\n\nlocal_sim_grocery → grocery_store_02\n\nlocal_sim_panipuri → panipuri_stall_01\n\nMap each real agent ID in config/env.php. Voice IDs below remain unusable until replaced in the shop JSON files.\n\nLakshmi Provision Store\ngrocery_store_02\n\nConfiguration valid\n\nta-IN/female: unfilled voice_id (REPLACE_WITH_VOICE_ID_TA_F_2).\n\nta-IN/male: unfilled voice_id (REPLACE_WITH_VOICE_ID_TA_M_2).\n\nen-IN/female: unfilled voice_id (REPLACE_WITH_VOICE_ID_EN_F_2).\n\nen-IN/male: unfilled voice_id (REPLACE_WITH_VOICE_ID_EN_M_2).\n\nta-IN · enabled\n\nelevenlabs / female\n\nREPLACE_WITH_VOICE_ID_TA_F_2\n\nplaceholder or missing voice → fell back to ta-IN\n\nNo usable voice configured yet; fallback is also a placeholder.\n\nen-IN · enabled\n\nelevenlabs / female\n\nREPLACE_WITH_VOICE_ID_TA_F_2\n\nplaceholder or missing voice → fell back to ta-IN\n\nNo usable voice configured yet; fallback is also a placeholder.\n\nta-IN closing: நன்றி! உங்க order owner-கிட்ட போயிருக்கு. அவங்க confirm பண்ணுவாங்க.\n\nen-IN closing: நன்றி! உங்க order owner-கிட்ட போயிருக்கு. அவங்க confirm பண்ணுவாங்க. fallback · ta-IN\n\nAnna Masala Puri Stall\npanipuri_stall_01\n\nConfiguration valid\n\nta-IN/female: unfilled voice_id (REPLACE_WITH_VOICE_ID_TA_F).\n\nta-IN/male: unfilled voice_id (REPLACE_WITH_VOICE_ID_TA_M).\n\nta-IN · enabled\n\nelevenlabs / female\n\nREPLACE_WITH_VOICE_ID_TA_F\n\nplaceholder or missing voice → fell back to ta-IN\n\nNo usable voice configured yet; fallback is also a placeholder.\n\nta-IN closing: நன்றி! Owner confirm பண்ணிட்டு உங்களுக்கு சொல்லுவாங்க.",
+  "desktopNavTargets": [
+    {
+      "text": "Orders",
+      "width": 50.5,
+      "height": 41.59375,
+      "minHeight": "auto",
+      "minWidth": "auto"
+    },
+    {
+      "text": "Import",
+      "width": 52.484375,
+      "height": 41.59375,
+      "minHeight": "auto",
+      "minWidth": "auto"
+    },
+    {
+      "text": "Config Health",
+      "width": 104.375,
+      "height": 41.59375,
+      "minHeight": "auto",
+      "minWidth": "auto"
+    },
+    {
+      "text": "Setup",
+      "width": 43.453125,
+      "height": 41.59375,
+      "minHeight": "auto",
+      "minWidth": "auto"
+    }
+  ],
+  "result": "PASS"
+}
