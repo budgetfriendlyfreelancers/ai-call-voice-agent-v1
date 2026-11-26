@@ -1,0 +1,92 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : 26 November 2026 07:41:18
+   Source : D:\My-Projects\Ai-Call-Voice-Agent\
+     Dest : C:\wamp64\www\voiceshop\
+
+    Files : *.*
+	    
+ Exc Dirs : .git
+	    verification
+	    node_modules
+	    storage
+	    
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /R:1 /W:1 
+
+------------------------------------------------------------------------------
+
+	                   6	D:\My-Projects\Ai-Call-Voice-Agent\
+	    New File  		     545	.env.example100%  
+	    Newer     		     107	.gitignore100%  
+	                   2	D:\My-Projects\Ai-Call-Voice-Agent\config\
+	    Newer     		     656	env.example.php100%  
+	    Newer     		     514	env.php100%  
+	                   2	D:\My-Projects\Ai-Call-Voice-Agent\config\shops\
+	    Newer     		   14181	grocery_store_02.json100%  
+	    Newer     		   12175	panipuri_stall_01.json100%  
+	                   2	D:\My-Projects\Ai-Call-Voice-Agent\database\
+	    New File  		     364	migrate.php100%  
+	    Newer     		    2221	schema.sql100%  
+	  New Dir          1	D:\My-Projects\Ai-Call-Voice-Agent\database\migrations\
+	    New File  		     606	002_calls.sql100%  
+	                   3	D:\My-Projects\Ai-Call-Voice-Agent\public\
+	    Newer     		     144	import.php100%  
+	                   0	D:\My-Projects\Ai-Call-Voice-Agent\public\assets\
+	                   1	D:\My-Projects\Ai-Call-Voice-Agent\public\assets\css\
+	    Newer     		    3896	app.css100%  
+	                   1	D:\My-Projects\Ai-Call-Voice-Agent\public\assets\js\
+	  New Dir          1	D:\My-Projects\Ai-Call-Voice-Agent\public\webhook\
+	    New File  		     679	elevenlabs.php100%  
+	                   0	D:\My-Projects\Ai-Call-Voice-Agent\src\
+	                   6	D:\My-Projects\Ai-Call-Voice-Agent\src\Config\
+	    Newer     		    9336	ConfigValidator.php100%  
+	    New File  		     720	WebhookSettings.php100%  
+	                   2	D:\My-Projects\Ai-Call-Voice-Agent\src\Db\
+	    Newer     		     660	Migrator.php100%  
+	                   1	D:\My-Projects\Ai-Call-Voice-Agent\src\Domain\
+	                   4	D:\My-Projects\Ai-Call-Voice-Agent\src\Http\
+	    Newer     		    7262	App.php100%  
+	    New File  		    2305	ElevenLabsWebhookController.php100%  
+	                   1	D:\My-Projects\Ai-Call-Voice-Agent\src\Language\
+	                   5	D:\My-Projects\Ai-Call-Voice-Agent\src\Repository\
+	    New File  		     655	CallRepository.php100%  
+	    Newer     		    2423	OrderRepository.php100%  
+	                   8	D:\My-Projects\Ai-Call-Voice-Agent\src\Service\
+	    Newer     		    3333	OrderIntakeService.php100%  
+	    Newer     		    4051	PayloadValidator.php100%  
+	                   4	D:\My-Projects\Ai-Call-Voice-Agent\src\Voice\
+	    Newer     		     535	ElevenLabsProvider.php100%  
+	  New Dir          5	D:\My-Projects\Ai-Call-Voice-Agent\src\Webhook\
+	    New File  		    3739	ElevenLabsExtraction.php100%  
+	    New File  		    1294	ElevenLabsSignature.php100%  
+	    New File  		    2824	ElevenLabsWebhookService.php100%  
+	    New File  		     871	ProductMatcher.php100%  
+	    New File  		     646	WebhookLog.php100%  
+	                   6	D:\My-Projects\Ai-Call-Voice-Agent\tests\
+	    New File  		     894	configure_webhook_demo.php100%  
+	    Newer     		    9244	http_tests.php100%  
+	    New File  		    2235	simulate_webhook.php100%  
+	    New File  		    9477	webhook_tests.php100%  
+	  New Dir          2	D:\My-Projects\Ai-Call-Voice-Agent\tests\Support\
+	    New File  		    2559	ElevenLabsFixture.php100%  
+	    New File  		    1312	WebhookClient.php100%  
+	                   7	D:\My-Projects\Ai-Call-Voice-Agent\views\
+	    Newer     		    2040	health.php100%  
+	    Newer     		    1337	import.php100%  
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :        25         4        21         0         0         0
+   Files :        70        35        35         0         0         0
+   Bytes :   199.0 k   103.3 k    95.7 k         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   Speed :              317837 Bytes/sec.
+   Speed :              18.186 MegaBytes/min.
+   Ended : 26 November 2026 07:41:19
+

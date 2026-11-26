@@ -1,0 +1,183 @@
+{
+    "shop_id":  "panipuri_stall_01",
+    "_comment_shop_id":  "Unique slug. Webhook uses it (or the dialed number) to find this config.",
+    "shop_name":  "Anna Masala Puri Stall",
+    "shop_type":  "street_stall",
+    "inbound_number":  "+914400000001",
+    "_comment_inbound":  "Number customers dial. Maps call -\u003e shop.",
+    "default_language":  "ta-IN",
+    "enabled_languages":  [
+                              "ta-IN"
+                          ],
+    "_comment_languages":  "To run this stall in English tomorrow: add an en-IN block under languages and put \u0027en-IN\u0027 in enabled_languages. No engine change.",
+    "voice_provider":  "elevenlabs",
+    "_comment_voice_ids": "TODO(user): paste real ElevenLabs voice ids into each languages.<code>.voice.options.<gender>.voice_id; REPLACE_ values are unusable placeholders.",
+    "_comment_voice_provider":  "Provider key resolved by VoiceProviderFactory. Swap by changing this value only. Voice gender and voice_id are per language, inside each language block.",
+    "languages":  {
+                      "ta-IN":  {
+                                    "voice":  {
+                                                  "selected":  "female",
+                                                  "_comment_selected":  "Owner\u0027s pick. male or female. Engine reads voice.options[voice.selected].voice_id.",
+                                                  "options":  {
+                                                                  "female":  {
+                                                                                 "voice_id":  "REPLACE_WITH_VOICE_ID_TA_F"
+                                                                             },
+                                                                  "male":  {
+                                                                               "voice_id":  "REPLACE_WITH_VOICE_ID_TA_M"
+                                                                           }
+                                                              }
+                                              },
+                                    "persona":  "Friendly young Tamil shop assistant, short polite sentences, casual Chennai Tamil.",
+                                    "greeting":  "வணக்கம்! Anna Masala Puri Stall-க்கு வரவேற்கிறோம். என்ன வேணும்?",
+                                    "closing":  "நன்றி! Owner confirm பண்ணிட்டு உங்களுக்கு சொல்லுவாங்க.",
+                                    "delivery_notice":  "Delivery owner approve பண்ணினா மட்டும்தான். நேரம் WhatsApp-ல சொல்லுவாங்க.",
+                                    "agent_may_say_after_order":  "உங்க order வந்துடுச்சு. Owner confirm பண்ணுவாங்க.",
+                                    "products":  {
+                                                     "masala_puri":  {
+                                                                         "display_name":  "மசாலா பூரி",
+                                                                         "aliases":  [
+                                                                                         "masala poori",
+                                                                                         "masala puri plate"
+                                                                                     ]
+                                                                     },
+                                                     "pani_puri":  {
+                                                                       "display_name":  "பானி பூரி",
+                                                                       "aliases":  [
+                                                                                       "panipuri",
+                                                                                       "golgappa"
+                                                                                   ]
+                                                                   }
+                                                 },
+                                    "dashboard_customer_text":  {
+                                                                    "_comment":  "Strings the dashboard shows or sends to customers (e.g. WhatsApp status updates). Owner-facing text is not localized here.",
+                                                                    "order_received":  "உங்க order கிடைச்சிடுச்சு. Owner confirm பண்ணுவாங்க.",
+                                                                    "order_confirmed":  "உங்க order confirm ஆயிடுச்சு!",
+                                                                    "out_for_delivery":  "உங்க order delivery-க்கு கிளம்பிடுச்சு."
+                                                                }
+                                }
+                  },
+    "products":  [
+                     {
+                         "sku":  "masala_puri",
+                         "_comment_sku":  "sku is the join key. Display name and spoken aliases for it live under languages[code].products[sku].",
+                         "unit":  "plate",
+                         "allowed_units":  [
+                                               "plate"
+                                           ],
+                         "price":  40,
+                         "price_visibility":  "owner_only",
+                         "_comment_price":  "owner_only = agent never says it, shown in dashboard. customer_ok = agent may read price. never_show = no price in any customer-facing text.",
+                         "options":  [
+                                         {
+                                             "key":  "spice",
+                                             "values":  [
+                                                            "mild",
+                                                            "medium",
+                                                            "spicy"
+                                                        ],
+                                             "required":  false
+                                         }
+                                     ]
+                     },
+                     {
+                         "sku":  "pani_puri",
+                         "unit":  "plate",
+                         "allowed_units":  [
+                                               "plate"
+                                           ],
+                         "price":  30,
+                         "price_visibility":  "owner_only",
+                         "options":  [
+
+                                     ]
+                     }
+                 ],
+    "required_fields":  {
+                            "_comment":  "Extraction marks order NEEDS_DETAILS if a required field is missing. Field names are language-independent; the agent asks for them in the active language.",
+                            "customer_name":  {
+                                                  "required":  true
+                                              },
+                            "phone":  {
+                                          "required":  false,
+                                          "_comment":  "Optional. Caller ID is stored anyway."
+                                      },
+                            "address":  {
+                                            "required":  true,
+                                            "parts":  [
+                                                          "house_no",
+                                                          "street",
+                                                          "area",
+                                                          "landmark",
+                                                          "pincode"
+                                                      ],
+                                            "must_have":  [
+                                                              "street",
+                                                              "area"
+                                                          ],
+                                            "_comment":  "Full address: agent asks for each part."
+                                        }
+                        },
+    "delivery":  {
+                     "options":  [
+                                     "pickup",
+                                     "home_delivery"
+                                 ],
+                     "default":  "pickup",
+                     "_comment_notice":  "The customer-facing delivery notice text lives per language: languages[code].delivery_notice.",
+                     "service_area_note":  "Within 3 km (owner checks, agent does not promise)",
+                     "requested_time_allowed":  true
+                 },
+    "payment":  {
+                    "options":  [
+                                    "cash_on_delivery",
+                                    "upi"
+                                ],
+                    "ask_preference":  true,
+                    "_comment":  "Agent only records the preference. No payment taken on call."
+                },
+    "whatsapp_enquiry_number":  "+919800000001",
+    "_comment_whatsapp":  "Agent tells customers to message here for stock/price/delivery questions, in the active language.",
+    "statuses":  [
+                     "DRAFT",
+                     "NEEDS_DETAILS",
+                     "AWAITING_MERCHANT_APPROVAL",
+                     "CONFIRMED",
+                     "READY_FOR_DELIVERY",
+                     "COMPLETED"
+                 ],
+    "status_flow":  {
+                        "DRAFT":  [
+                                      "NEEDS_DETAILS",
+                                      "AWAITING_MERCHANT_APPROVAL"
+                                  ],
+                        "NEEDS_DETAILS":  [
+                                              "AWAITING_MERCHANT_APPROVAL"
+                                          ],
+                        "AWAITING_MERCHANT_APPROVAL":  [
+                                                           "CONFIRMED",
+                                                           "NEEDS_DETAILS"
+                                                       ],
+                        "CONFIRMED":  [
+                                          "READY_FOR_DELIVERY"
+                                      ],
+                        "READY_FOR_DELIVERY":  [
+                                                   "COMPLETED"
+                                               ],
+                        "COMPLETED":  [
+
+                                      ]
+                    },
+    "_comment_status":  "Dashboard enforces allowed transitions from this map. Only the owner moves AWAITING_MERCHANT_APPROVAL -\u003e CONFIRMED. Statuses are internal codes; customer-facing labels come from languages[code].dashboard_customer_text.",
+    "rules":  {
+                  "agent_never_confirms":  [
+                                               "stock",
+                                               "price",
+                                               "delivery"
+                                           ],
+                  "_comment_may_say":  "The post-order line the agent may say is per language: languages[code].agent_may_say_after_order.",
+                  "unknown_item_action":  "note_as_free_text_and_flag",
+                  "max_items_per_order":  20,
+                  "owner_approval_required":  true,
+                  "transfer_to_human":  false
+              }
+}

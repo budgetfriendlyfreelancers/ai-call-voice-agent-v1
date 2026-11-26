@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>VoiceShop · Owner dashboard</title><link rel="stylesheet" href="assets/css/app.css"></head>
+<body><header><div class="top"><a class="brand" href="index.php">VoiceShop<span>Orders, ready for your review</span></a><span class="demo">PROTOTYPE DEMO</span></div>
+<nav aria-label="Main navigation"><a href="index.php">Orders</a><a href="import.php">Import</a><a href="index.php?page=health">Config Health</a><a href="setup.php">Setup</a></nav>
+<form method="get" class="switch"><label for="shop">Shop</label><select id="shop" name="shop"><option value="">All shops</option><option value="grocery_store_02" >Lakshmi Provision Store</option><option value="panipuri_stall_01" >Anna Masala Puri Stall</option></select><button>View orders</button></form>
+<details class="owner"><summary>Owner mode: ON</summary><form method="post" action="index.php?page=owner"><input type="hidden" name="csrf" value="7a0cc70e0fbf4faa788d45ab176ab1d22cc0de3293a5e8a0318077d02ad1fd36"><button name="disable" value="1">Leave owner mode</button></form></details></header>
+<main><div class="notice" role="status">Order imported.</div><h1>Import an order</h1><div class="notice"><strong>FUTURE WEBHOOK ENTRY POINT</strong> — in production, the voice platform's post-call webhook will POST this same JSON here. For Run 1 you paste it manually.</div>
+<p><a class="button" href="index.php?page=detail&id=13">Open order #13</a></p><div class="row"><button type="button" data-sample="0">Sample JSON: complete</button><button type="button" data-sample="1">Sample JSON: missing fields</button></div>
+<form method="post"><input type="hidden" name="csrf" value="7a0cc70e0fbf4faa788d45ab176ab1d22cc0de3293a5e8a0318077d02ad1fd36"><label>Fallback shop (JSON shop_id wins)<select name="shop_id"><option value="grocery_store_02">Lakshmi Provision Store</option><option value="panipuri_stall_01">Anna Masala Puri Stall</option></select></label><label>Order JSON<textarea id="payload" name="payload" rows="22" required spellcheck="false">{
+    &quot;missing_fields&quot;:  [
+
+                       ],
+    &quot;items&quot;:  [
+                  {
+                      &quot;raw_text&quot;:  &quot;Verification order&quot;,
+                      &quot;unit&quot;:  &quot;plate&quot;,
+                      &quot;options&quot;:  {
+
+                                  },
+                      &quot;qty&quot;:  2,
+                      &quot;sku&quot;:  &quot;masala_puri&quot;
+                  }
+              ],
+    &quot;shop_id&quot;:  &quot;panipuri_stall_01&quot;,
+    &quot;customer&quot;:  {
+                     &quot;name&quot;:  &quot;Verification curl fictional&quot;,
+                     &quot;phone&quot;:  &quot;0000000000&quot;,
+                     &quot;address&quot;:  {
+                                     &quot;area&quot;:  &quot;Demo area&quot;,
+                                     &quot;street&quot;:  &quot;Demo street&quot;
+                                 }
+                 },
+    &quot;delivery_choice&quot;:  &quot;pickup&quot;,
+    &quot;flags&quot;:  [
+
+              ],
+    &quot;requested_time&quot;:  &quot;&quot;,
+    &quot;payment_choice&quot;:  &quot;upi&quot;,
+    &quot;language&quot;:  &quot;ta-IN&quot;,
+    &quot;call_id&quot;:  &quot;VERIFY-CURL-1795629294172&quot;
+}</textarea></label><button>Import order</button></form>
+<script type="application/json" id="samples">[{"shop_id":"panipuri_stall_01","call_id":"SAMPLE-20261125-232545-complete","language":"ta-IN","customer":{"name":"டெமோ குமார் (fictional)","phone":"0000000000","address":{"house_no":"DEMO 1","street":"மாதிரி தெரு","area":"Demo area","landmark":"Fictional location","pincode":"000000"}},"items":[{"sku":"masala_puri","qty":2,"unit":"plate","options":{},"raw_text":"Demo order"}],"delivery_choice":"pickup","payment_choice":"upi","requested_time":"","missing_fields":[],"flags":[]},{"shop_id":"grocery_store_02","call_id":"SAMPLE-20261125-232545-missing","language":"en-IN","customer":{"name":"டெமோ குமார் (fictional)","phone":"","address":[]},"items":[{"sku":"rice_ponni","qty":2,"unit":"kg","options":{},"raw_text":"Demo order"}],"delivery_choice":"pickup","payment_choice":"upi","requested_time":"","missing_fields":[],"flags":[]}]</script><script src="assets/js/import.js" defer></script>
+</main><footer>VoiceShop · Manual import prototype · Customer messages are previews only</footer></body></html>

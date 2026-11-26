@@ -1,0 +1,48 @@
+﻿{
+    "calls_schema": {
+        "Table": "calls",
+        "Create Table": "CREATE TABLE `calls` (\n  `id` int unsigned NOT NULL AUTO_INCREMENT,\n  `shop_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `call_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,\n  `transcript` text COLLATE utf8mb4_unicode_ci,\n  `payload` json NOT NULL,\n  `extraction` json DEFAULT NULL,\n  `received_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  PRIMARY KEY (`id`),\n  UNIQUE KEY `call_id` (`call_id`),\n  KEY `calls_shop_fk` (`shop_id`),\n  KEY `calls_received` (`received_at`),\n  CONSTRAINT `calls_shop_fk` FOREIGN KEY (`shop_id`) REFERENCES `shops` (`shop_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci"
+    },
+    "orders_call_id": {
+        "COLUMN_TYPE": "varchar(255)",
+        "COLLATION_NAME": "utf8mb4_bin"
+    },
+    "simulation_rows": [
+        {
+            "call_id": "SIM-4bceb44f2903f537-complete",
+            "shop_id": "grocery_store_02",
+            "valid_payload": 1,
+            "valid_extraction": 1,
+            "order_id": 42,
+            "status": "AWAITING_MERCHANT_APPROVAL",
+            "history_rows": 1
+        },
+        {
+            "call_id": "SIM-4bceb44f2903f537-missing",
+            "shop_id": "grocery_store_02",
+            "valid_payload": 1,
+            "valid_extraction": 1,
+            "order_id": 43,
+            "status": "NEEDS_DETAILS",
+            "history_rows": 1
+        },
+        {
+            "call_id": "SIM-9082fe4f26491bec-complete",
+            "shop_id": "grocery_store_02",
+            "valid_payload": 1,
+            "valid_extraction": 1,
+            "order_id": 24,
+            "status": "AWAITING_MERCHANT_APPROVAL",
+            "history_rows": 1
+        },
+        {
+            "call_id": "SIM-9082fe4f26491bec-missing",
+            "shop_id": "grocery_store_02",
+            "valid_payload": 1,
+            "valid_extraction": 1,
+            "order_id": 25,
+            "status": "NEEDS_DETAILS",
+            "history_rows": 1
+        }
+    ]
+}

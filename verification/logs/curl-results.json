@@ -1,0 +1,106 @@
+﻿[
+    {
+        "name":  "curl-setup-get",
+        "url":  "http://localhost/voiceshop/public/setup.php",
+        "status":  "200",
+        "excerpt":  "VoiceShop · Owner dashboard VoiceShop Orders, ready for your review PROTOTYPE DEMO Orders Import Config Health Setup Shop All shops Lakshmi Provision Store Anna Masala Puri Stall View orders Owner mode: ON Leave owner mode Set up the demo Create missing tables, sync shop configs and import four fictional orders. Repeating this does not duplicate the seed orders or reset edits. Create tables \u0026 seed demo data Open dashboard → VoiceShop · Manual import prototype · Customer messages are previews only",
+        "headers":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-setup-get-headers.txt",
+        "body":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-setup-get.html"
+    },
+    {
+        "name":  "curl-setup-seed",
+        "url":  "http://localhost/voiceshop/public/setup.php",
+        "status":  "200",
+        "excerpt":  "VoiceShop · Owner dashboard VoiceShop Orders, ready for your review PROTOTYPE DEMO Orders Import Config Health Setup Shop All shops Lakshmi Provision Store Anna Masala Puri Stall View orders Owner mode: ON Leave owner mode DEMO-0001: duplicate - already imported | DEMO-0002: duplicate - already imported | DEMO-0003: duplicate - already imported | DEMO-0004: duplicate - already imported Set up the demo Create missing tables, sync shop configs and import four fictional orders. Repeating this does not duplicate the seed orders or reset edits. Create tables \u0026 seed demo data Open dashboard → VoiceShop · Manual import prototype · Customer messages are previews only",
+        "headers":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-setup-seed-headers.txt",
+        "body":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-setup-seed.html"
+    },
+    {
+        "name":  "curl-owner-login",
+        "url":  "http://localhost/voiceshop/public/index.php?page=owner",
+        "status":  "302",
+        "excerpt":  "",
+        "headers":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-owner-login-headers.txt",
+        "body":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-owner-login.html"
+    },
+    {
+        "name":  "curl-orders",
+        "url":  "http://localhost/voiceshop/public/index.php",
+        "status":  "200",
+        "excerpt":  "VoiceShop · Owner dashboard VoiceShop Orders, ready for your review PROTOTYPE DEMO Orders Import Config Health Setup Shop All shops Lakshmi Provision Store Anna Masala Puri Stall View orders Owner mode: ON Leave owner mode OWNER WORKSPACE Your order desk Review details. Confirm when you\u0027re ready. + Import order Today\u0027s Orders 6 #12 Needs Details Missing apache 1795629322938 Lakshmi Provision Store 1 items 2026-11-25 23:25:35 5 missing details #11 Awaiting Merchant Approval Verification apache 1795629322938 Anna Masala Puri Stall 1 items 2026-11-25 23:25:32 #4 Confirmed டெமோ குமார் (fictional) Lakshmi Provision Store 1 items 2026-11-25 23:11:17 Demo data #3 Needs Details டெமோ குமார் (fictional) Lakshmi Provision Store 2 items 2026-11-25 23:11:17 2 missing details Demo data #2 Needs Details டெமோ குமார் (fictional) Anna Masala Puri Stall 1 items 2026-11-25 23:11:17 2 missing details Demo data #1 Awaiting Merchant Approval டெமோ குமார் (fictional) Anna Masala Puri Stall 1 items 2026-11-25 2",
+        "headers":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-orders-headers.txt",
+        "body":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-orders.html"
+    },
+    {
+        "name":  "curl-import",
+        "url":  "http://localhost/voiceshop/public/import.php",
+        "status":  "200",
+        "excerpt":  "VoiceShop · Owner dashboard VoiceShop Orders, ready for your review PROTOTYPE DEMO Orders Import Config Health Setup Shop All shops Lakshmi Provision Store Anna Masala Puri Stall View orders Owner mode: ON Leave owner mode Import an order FUTURE WEBHOOK ENTRY POINT — in production, the voice platform\u0027s post-call webhook will POST this same JSON here. For Run 1 you paste it manually. Sample JSON: complete Sample JSON: missing fields Fallback shop (JSON shop_id wins) Lakshmi Provision Store Anna Masala Puri Stall Order JSON Import order VoiceShop · Manual import prototype · Customer messages are previews only",
+        "headers":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-import-headers.txt",
+        "body":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-import.html"
+    },
+    {
+        "name":  "curl-health",
+        "url":  "http://localhost/voiceshop/public/index.php?page=health",
+        "status":  "200",
+        "excerpt":  "VoiceShop · Owner dashboard VoiceShop Orders, ready for your review PROTOTYPE DEMO Orders Import Config Health Setup Shop All shops Lakshmi Provision Store Anna Masala Puri Stall View orders Owner mode: ON Leave owner mode Config Health Files are the source of truth. Each load is validated; partial languages fall back per key. Lakshmi Provision Store grocery_store_02 Configuration valid ta-IN/female: unfilled voice_id (REPLACE_WITH_VOICE_ID_TA_F_2). ta-IN/male: unfilled voice_id (REPLACE_WITH_VOICE_ID_TA_M_2). en-IN/female: unfilled voice_id (REPLACE_WITH_VOICE_ID_EN_F_2). en-IN/male: unfilled voice_id (REPLACE_WITH_VOICE_ID_EN_M_2). ta-IN · enabled elevenlabs / female REPLACE_WITH_VOICE_ID_TA_F_2 placeholder or missing voice → fell back to ta-IN No usable voice configured yet; fallback is also a placeholder. en-IN · enabled elevenlabs / female REPLACE_WITH_VOICE_ID_TA_F_2 placeholder or missing voice → fell back to ta-IN No usable voice configured yet; fallback is also a placeholder. ",
+        "headers":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-health-headers.txt",
+        "body":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-health.html"
+    },
+    {
+        "name":  "curl-css",
+        "url":  "http://localhost/voiceshop/public/assets/css/app.css",
+        "status":  "200",
+        "excerpt":  ":root{font-family:system-ui,-apple-system,\"Segoe UI\",sans-serif;color:#183b35;background:#f3f5f1;line-height:1.6;font-size:16px}*{box-sizing:border-box}body{margin:0}header,main,footer{padding:24px max(18px,calc((100vw - 1200px)/2))}header{background:#fff;border-bottom:1px solid #d7e0d9}.top,.row,.heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.brand{font-size:26px;font-weight:800;text-decoration:none}.brand span{display:block;font-size:13px;font-weight:400;color:#64776e}.demo{font-size:11px;font-weight:800;letter-spacing:.08em;background:#fbe7bc;color:#6b460c;padding:6px 10px;border:1px solid #e8cc91;border-radius:6px}nav{display:flex;flex-wrap:wrap;gap:24px;margin:22px 0 14px}nav a{padding:8px 0;font-weight:650}a{color:#126450}h1{font-size:clamp(28px,4vw,40px);line-height:1.2;margin:8px 0 16px}h2{font-size:20px}h3{font-size:17px;margin-bottom:6px}p{margin:8px 0 16px}.eyebrow{letter-spacing:.12em;font-size:12px;font-weight:700;color:#5371",
+        "headers":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-css-headers.txt",
+        "body":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-css.html"
+    },
+    {
+        "name":  "curl-js",
+        "url":  "http://localhost/voiceshop/public/assets/js/import.js",
+        "status":  "200",
+        "excerpt":  "document.querySelectorAll(\u0027[data-sample]\u0027).forEach(button =\u003e { button.addEventListener(\u0027click\u0027, () =\u003e { const samples = JSON.parse(document.getElementById(\u0027samples\u0027).textContent); document.getElementById(\u0027payload\u0027).value = JSON.stringify(samples[Number(button.dataset.sample)], null, 2); }); });",
+        "headers":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-js-headers.txt",
+        "body":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-js.html"
+    },
+    {
+        "name":  "curl-import-submit",
+        "url":  "http://localhost/voiceshop/public/import.php",
+        "status":  "201",
+        "excerpt":  "VoiceShop · Owner dashboard VoiceShop Orders, ready for your review PROTOTYPE DEMO Orders Import Config Health Setup Shop All shops Lakshmi Provision Store Anna Masala Puri Stall View orders Owner mode: ON Leave owner mode Order imported. Import an order FUTURE WEBHOOK ENTRY POINT — in production, the voice platform\u0027s post-call webhook will POST this same JSON here. For Run 1 you paste it manually. Open order #13 Sample JSON: complete Sample JSON: missing fields Fallback shop (JSON shop_id wins) Lakshmi Provision Store Anna Masala Puri Stall Order JSON { \"missing_fields\": [ ], \"items\": [ { \"raw_text\": \"Verification order\", \"unit\": \"plate\", \"options\": { }, \"qty\": 2, \"sku\": \"masala_puri\" } ], \"shop_id\": \"panipuri_stall_01\", \"customer\": { \"name\": \"Verification curl fictional\", \"phone\": \"0000000000\", \"address\": { \"area\": \"Demo area\", \"street\": \"Demo street\" } }, \"delivery_choice\": \"pickup\", \"flags\": [ ], \"requested_time\": \"\", \"payment_choice\": \"upi\", \"language\": \"ta-IN\", \"call_id\": \"VERIFY",
+        "headers":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-import-submit-headers.txt",
+        "body":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-import-submit.html"
+    },
+    {
+        "name":  "curl-detail",
+        "url":  "http://localhost/voiceshop/public/index.php?page=detail\u0026id=13",
+        "status":  "200",
+        "excerpt":  "VoiceShop · Owner dashboard VoiceShop Orders, ready for your review PROTOTYPE DEMO Orders Import Config Health Setup Shop All shops Lakshmi Provision Store Anna Masala Puri Stall View orders Owner mode: ON Leave owner mode ← Orders Anna Masala Puri Stall Order #13 Awaiting Merchant Approval ta-IN · Call VERIFY-CURL-1795629294172 Created 2026-11-25 23:25:45 · Updated 2026-11-25 23:25:45 Customer \u0026 delivery Name Phone House No Street Area Landmark Pincode Delivery Not specified pickup home delivery Payment Not specified cash on delivery upi Requested time Items · Owner prices மசாலா பூரி masala_puri · Verification order Quantity Unit plate Config price: ₹40.00 · Line total: ₹80.00 Known-item total: ₹80.00 Prototype estimate: config price × quantity in the selected unit. See README for alternate-unit assumptions. Save details Next step Approve → Confirmed Needs Details Flags None Message to customer would be: Preview only — nothing is sent. order received உங்க order கிடைச்சிடுச்சு. Owner c",
+        "headers":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-detail-headers.txt",
+        "body":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-detail.html"
+    },
+    {
+        "name":  "curl-approve",
+        "url":  "http://localhost/voiceshop/public/index.php?page=detail\u0026id=13",
+        "status":  "302",
+        "excerpt":  "",
+        "headers":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-approve-headers.txt",
+        "body":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-approve.html"
+    },
+    {
+        "name":  "curl-approved-detail",
+        "url":  "http://localhost/voiceshop/public/index.php?page=detail\u0026id=13\u0026saved=1",
+        "status":  "200",
+        "excerpt":  "VoiceShop · Owner dashboard VoiceShop Orders, ready for your review PROTOTYPE DEMO Orders Import Config Health Setup Shop All shops Lakshmi Provision Store Anna Masala Puri Stall View orders Owner mode: ON Leave owner mode Saved. Status changes are always explicit. ← Orders Anna Masala Puri Stall Order #13 Confirmed ta-IN · Call VERIFY-CURL-1795629294172 Created 2026-11-25 23:25:45 · Updated 2026-11-25 23:25:46 Customer \u0026 delivery Name Phone House No Street Area Landmark Pincode Delivery Not specified pickup home delivery Payment Not specified cash on delivery upi Requested time Items · Owner prices மசாலா பூரி masala_puri · Verification order Quantity Unit plate Config price: ₹40.00 · Line total: ₹80.00 Known-item total: ₹80.00 Prototype estimate: config price × quantity in the selected unit. See README for alternate-unit assumptions. Save details Next step Ready For Delivery Flags None Message to customer would be: Preview only — nothing is sent. order received உங்க order கிடைச்சிடுச்",
+        "headers":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-approved-detail-headers.txt",
+        "body":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-approved-detail.html"
+    },
+    {
+        "name":  "curl-builtin-preserved",
+        "url":  "http://127.0.0.1:8087/index.php",
+        "status":  "200",
+        "excerpt":  "VoiceShop · Owner dashboard VoiceShop Orders, ready for your review PROTOTYPE DEMO Orders Import Config Health Setup Shop All shops Lakshmi Provision Store Anna Masala Puri Stall View orders Owner mode: OFF Owner PIN Enable owner mode OWNER WORKSPACE Your order desk Review details. Confirm when you\u0027re ready. + Import order Today\u0027s Orders 7 #13 Confirmed Verification curl fictional Anna Masala Puri Stall 1 items 2026-11-25 23:25:45 #12 Needs Details Missing apache 1795629322938 Lakshmi Provision Store 1 items 2026-11-25 23:25:35 5 missing details #11 Confirmed Verification apache 1795629322938 Anna Masala Puri Stall 1 items 2026-11-25 23:25:32 #4 Confirmed டெமோ குமார் (fictional) Lakshmi Provision Store 1 items 2026-11-25 23:11:17 Demo data #3 Needs Details டெமோ குமார் (fictional) Lakshmi Provision Store 2 items 2026-11-25 23:11:17 2 missing details Demo data #2 Needs Details டெமோ குமார் (fictional) Anna Masala Puri Stall 1 items 2026-11-25 23:11:17 2 missing details Demo data #1 Awaiti",
+        "headers":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-builtin-preserved-headers.txt",
+        "body":  "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\logs\\curl-builtin-preserved.html"
+    }
+]

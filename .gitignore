@@ -1,0 +1,6 @@
+/config/env.php
+/storage/logs/*
+!/storage/logs/.gitkeep
+/tests/local.php
+/.env
+/verification/node_modules/

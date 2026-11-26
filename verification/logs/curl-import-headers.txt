@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Date: Wed, 25 Nov 2026 17:55:42 GMT
+Server: Apache/2.4.62 (Win64) PHP/8.1.31 mod_fcgid/2.3.10-dev
+X-Powered-By: PHP/8.1.31
+X-Content-Type-Options: nosniff
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Length: 3161
+Content-Type: text/html; charset=utf-8
+

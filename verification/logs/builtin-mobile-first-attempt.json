@@ -1,0 +1,407 @@
+{
+  "name": "builtin",
+  "base": "http://127.0.0.1:8087",
+  "browser": "157.0.8103.79",
+  "viewport": "390x844 @2x",
+  "checks": [
+    {
+      "name": "owner-login",
+      "url": "http://127.0.0.1:8087/index.php",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": []
+    },
+    {
+      "name": "order-list",
+      "url": "http://127.0.0.1:8087/index.php",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": []
+    },
+    {
+      "name": "existing-detail",
+      "url": "http://127.0.0.1:8087/index.php?page=detail&id=13",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": []
+    },
+    {
+      "name": "complete-import-form",
+      "url": "http://127.0.0.1:8087/import.php",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": []
+    },
+    {
+      "name": "complete-import-result",
+      "url": "http://127.0.0.1:8087/import.php",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": []
+    },
+    {
+      "name": "new-order-listed",
+      "url": "http://127.0.0.1:8087/index.php",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": []
+    },
+    {
+      "name": "needs-details-list",
+      "url": "http://127.0.0.1:8087/index.php",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": []
+    },
+    {
+      "name": "needs-details-highlight",
+      "url": "http://127.0.0.1:8087/index.php?page=detail&id=15",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": []
+    },
+    {
+      "name": "wrong-pin-rejected",
+      "url": "http://127.0.0.1:8087/index.php?page=owner",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": []
+    },
+    {
+      "name": "still-unapproved",
+      "url": "http://127.0.0.1:8087/index.php?page=detail&id=14",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": [
+        {
+          "tag": "FORM",
+          "cls": "",
+          "text": "Owner PINEnable owner mode"
+        }
+      ]
+    },
+    {
+      "name": "approved",
+      "url": "http://127.0.0.1:8087/index.php?page=detail&id=14&saved=1",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": []
+    },
+    {
+      "name": "approved-history",
+      "url": "http://127.0.0.1:8087/index.php?page=detail&id=14",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": []
+    },
+    {
+      "name": "failure",
+      "url": "http://127.0.0.1:8087/index.php?page=health",
+      "width": 390,
+      "scrollWidth": 390,
+      "offenders": []
+    }
+  ],
+  "screenshots": [
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\screenshots\\01-builtin-owner-login.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\screenshots\\02-builtin-order-list.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\screenshots\\03-builtin-existing-detail.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\screenshots\\04-builtin-complete-import-form.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\screenshots\\05-builtin-complete-import-result.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\screenshots\\06-builtin-new-order-listed.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\screenshots\\07-builtin-needs-details-list.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\screenshots\\08-builtin-needs-details-highlight.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\screenshots\\09-builtin-wrong-pin-rejected.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\screenshots\\10-builtin-still-unapproved.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\screenshots\\11-builtin-approved.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\screenshots\\12-builtin-approved-history.png",
+    "D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\screenshots\\13-builtin-failure.png"
+  ],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 422 (Unknown Status Code)"
+  ],
+  "failedRequests": [],
+  "errorResponses": [
+    {
+      "status": 422,
+      "url": "http://127.0.0.1:8087/index.php?page=owner"
+    }
+  ],
+  "responses": [
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 302,
+      "url": "http://127.0.0.1:8087/index.php?page=owner"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/index.php?page=detail&id=13"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/import.php"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/js/import.js"
+    },
+    {
+      "status": 201,
+      "url": "http://127.0.0.1:8087/import.php"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/js/import.js"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/index.php?page=detail&id=14"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/import.php"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/js/import.js"
+    },
+    {
+      "status": 201,
+      "url": "http://127.0.0.1:8087/import.php"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/js/import.js"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/index.php?page=detail&id=15"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 302,
+      "url": "http://127.0.0.1:8087/index.php?page=owner"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/index.php?page=detail&id=14"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 422,
+      "url": "http://127.0.0.1:8087/index.php?page=owner"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/index.php?page=detail&id=14"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 302,
+      "url": "http://127.0.0.1:8087/index.php?page=owner"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/index.php?page=detail&id=14"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 302,
+      "url": "http://127.0.0.1:8087/index.php?page=detail&id=14"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/index.php?page=detail&id=14&saved=1"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/index.php"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/index.php?page=detail&id=14"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/index.php?page=health"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:8087/assets/css/app.css"
+    }
+  ],
+  "tapTargets": [],
+  "orders": {
+    "good": {
+      "call_id": "VERIFY-builtin-1795629350684-GOOD",
+      "customer": "Verification builtin 1795629350684",
+      "phone": "0009350684",
+      "id": 14
+    },
+    "missing": {
+      "call_id": "VERIFY-builtin-1795629350684-MISSING",
+      "customer": "Missing builtin 1795629350684",
+      "id": 15
+    }
+  },
+  "missingFields": "Missing\nphone\naddress.house_no\naddress.street\naddress.area\naddress.pincode",
+  "missingStyles": [
+    {
+      "name": "customer[phone]",
+      "className": "missing",
+      "border": "rgb(183, 80, 45)",
+      "background": "rgb(255, 245, 235)"
+    },
+    {
+      "name": "customer[address][house_no]",
+      "className": "missing",
+      "border": "rgb(183, 80, 45)",
+      "background": "rgb(255, 245, 235)"
+    },
+    {
+      "name": "customer[address][street]",
+      "className": "missing",
+      "border": "rgb(183, 80, 45)",
+      "background": "rgb(255, 245, 235)"
+    },
+    {
+      "name": "customer[address][area]",
+      "className": "missing",
+      "border": "rgb(183, 80, 45)",
+      "background": "rgb(255, 245, 235)"
+    },
+    {
+      "name": "customer[address][pincode]",
+      "className": "missing",
+      "border": "rgb(183, 80, 45)",
+      "background": "rgb(255, 245, 235)"
+    }
+  ],
+  "history": "Status history\n\nDraft → Awaiting Merchant Approval\n2026-11-25 23:25:58 · system/webhook-sim\n\nAwaiting Merchant Approval → Confirmed\n2026-11-25 23:26:11 · owner",
+  "result": "FAIL",
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n6 !== 8\n\n    at run (D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\mobile-check.js:64:101)\n    at async D:\\My-Projects\\Ai-Call-Voice-Agent\\verification\\mobile-check.js:78:134"
+}

@@ -1,0 +1,15 @@
+{
+    "php_version": "8.1.31",
+    "sapi": "apache2handler",
+    "server": "Apache\/2.4.62 (Win64) PHP\/8.1.31 mod_fcgid\/2.3.10-dev",
+    "pdo_mysql": true,
+    "mbstring": true,
+    "rewrite_module": true,
+    "session_cookie_path": "\/",
+    "session_save_path": "c:\/wamp64\/tmp",
+    "php_error_log": "c:\/wamp64\/logs\/php_error.log",
+    "db_host": "127.0.0.1",
+    "db_port": 3306,
+    "db_name": "voiceshop",
+    "owner_pin_matches_demo": true
+}

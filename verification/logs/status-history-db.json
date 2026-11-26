@@ -1,0 +1,152 @@
+﻿{
+    "queries": [
+        {
+            "sql": "SELECT id,call_id,status,customer_name,customer_phone,missing_fields_json FROM orders WHERE id=? AND call_id=?",
+            "parameters": [
+                16,
+                "VERIFY-apache-1795629414817-GOOD"
+            ]
+        },
+        {
+            "sql": "SELECT from_status,to_status,changed_by,changed_at FROM order_status_log WHERE order_id=? ORDER BY id",
+            "parameters": [
+                16
+            ]
+        },
+        {
+            "sql": "SELECT id,call_id,status,customer_name,customer_phone,missing_fields_json FROM orders WHERE id=? AND call_id=?",
+            "parameters": [
+                17,
+                "VERIFY-apache-1795629414817-MISSING"
+            ]
+        },
+        {
+            "sql": "SELECT from_status,to_status,changed_by,changed_at FROM order_status_log WHERE order_id=? ORDER BY id",
+            "parameters": [
+                17
+            ]
+        },
+        {
+            "sql": "SELECT id,call_id,status,customer_name,customer_phone,missing_fields_json FROM orders WHERE id=? AND call_id=?",
+            "parameters": [
+                18,
+                "VERIFY-builtin-1795629447496-GOOD"
+            ]
+        },
+        {
+            "sql": "SELECT from_status,to_status,changed_by,changed_at FROM order_status_log WHERE order_id=? ORDER BY id",
+            "parameters": [
+                18
+            ]
+        },
+        {
+            "sql": "SELECT id,call_id,status,customer_name,customer_phone,missing_fields_json FROM orders WHERE id=? AND call_id=?",
+            "parameters": [
+                19,
+                "VERIFY-builtin-1795629447496-MISSING"
+            ]
+        },
+        {
+            "sql": "SELECT from_status,to_status,changed_by,changed_at FROM order_status_log WHERE order_id=? ORDER BY id",
+            "parameters": [
+                19
+            ]
+        }
+    ],
+    "orders": {
+        "apache": {
+            "good": {
+                "row": {
+                    "id": 16,
+                    "call_id": "VERIFY-apache-1795629414817-GOOD",
+                    "status": "CONFIRMED",
+                    "customer_name": "Verification apache 1795629414817",
+                    "customer_phone": "0009414817",
+                    "missing_fields_json": "[]"
+                },
+                "history": [
+                    {
+                        "from_status": "DRAFT",
+                        "to_status": "AWAITING_MERCHANT_APPROVAL",
+                        "changed_by": "system\/webhook-sim",
+                        "changed_at": "2026-11-25 23:27:03"
+                    },
+                    {
+                        "from_status": "AWAITING_MERCHANT_APPROVAL",
+                        "to_status": "CONFIRMED",
+                        "changed_by": "owner",
+                        "changed_at": "2026-11-25 23:27:21"
+                    }
+                ]
+            },
+            "missing": {
+                "row": {
+                    "id": 17,
+                    "call_id": "VERIFY-apache-1795629414817-MISSING",
+                    "status": "NEEDS_DETAILS",
+                    "customer_name": "Missing apache 1795629414817",
+                    "customer_phone": "",
+                    "missing_fields_json": "[\"phone\",\"address.house_no\",\"address.street\",\"address.area\",\"address.pincode\"]"
+                },
+                "history": [
+                    {
+                        "from_status": "DRAFT",
+                        "to_status": "NEEDS_DETAILS",
+                        "changed_by": "system\/webhook-sim",
+                        "changed_at": "2026-11-25 23:27:09"
+                    }
+                ]
+            }
+        },
+        "builtin": {
+            "good": {
+                "row": {
+                    "id": 18,
+                    "call_id": "VERIFY-builtin-1795629447496-GOOD",
+                    "status": "CONFIRMED",
+                    "customer_name": "Verification builtin 1795629447496",
+                    "customer_phone": "0009447496",
+                    "missing_fields_json": "[]"
+                },
+                "history": [
+                    {
+                        "from_status": "DRAFT",
+                        "to_status": "AWAITING_MERCHANT_APPROVAL",
+                        "changed_by": "system\/webhook-sim",
+                        "changed_at": "2026-11-25 23:27:39"
+                    },
+                    {
+                        "from_status": "AWAITING_MERCHANT_APPROVAL",
+                        "to_status": "CONFIRMED",
+                        "changed_by": "owner",
+                        "changed_at": "2026-11-25 23:27:54"
+                    }
+                ]
+            },
+            "missing": {
+                "row": {
+                    "id": 19,
+                    "call_id": "VERIFY-builtin-1795629447496-MISSING",
+                    "status": "NEEDS_DETAILS",
+                    "customer_name": "Missing builtin 1795629447496",
+                    "customer_phone": "",
+                    "missing_fields_json": "[\"phone\",\"address.house_no\",\"address.street\",\"address.area\",\"address.pincode\"]"
+                },
+                "history": [
+                    {
+                        "from_status": "DRAFT",
+                        "to_status": "NEEDS_DETAILS",
+                        "changed_by": "system\/webhook-sim",
+                        "changed_at": "2026-11-25 23:27:44"
+                    }
+                ]
+            }
+        }
+    },
+    "counts": {
+        "shops": 2,
+        "orders": 13,
+        "order_items": 14,
+        "order_status_log": 19
+    }
+}

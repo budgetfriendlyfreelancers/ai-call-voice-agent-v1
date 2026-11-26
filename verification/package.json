@@ -1,0 +1,1 @@
+{"name":"voiceshop-verification","private":true,"version":"1.0.0","description":"Verification-only browser tooling","devDependencies":{"playwright":"^1.58.0"}}

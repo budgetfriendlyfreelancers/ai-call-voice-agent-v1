@@ -1,0 +1,33 @@
+{
+    "missing_fields":  [
+
+                       ],
+    "items":  [
+                  {
+                      "raw_text":  "Verification order",
+                      "unit":  "plate",
+                      "options":  {
+
+                                  },
+                      "qty":  2,
+                      "sku":  "masala_puri"
+                  }
+              ],
+    "shop_id":  "panipuri_stall_01",
+    "customer":  {
+                     "name":  "Verification curl fictional",
+                     "phone":  "0000000000",
+                     "address":  {
+                                     "area":  "Demo area",
+                                     "street":  "Demo street"
+                                 }
+                 },
+    "delivery_choice":  "pickup",
+    "flags":  [
+
+              ],
+    "requested_time":  "",
+    "payment_choice":  "upi",
+    "language":  "ta-IN",
+    "call_id":  "VERIFY-CURL-1795629294172"
+}

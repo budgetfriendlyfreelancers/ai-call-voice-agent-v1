@@ -1,0 +1,222 @@
+{
+    "shop_id":  "grocery_store_02",
+    "shop_name":  "Lakshmi Provision Store",
+    "shop_type":  "grocery",
+    "inbound_number":  "+914400000002",
+    "default_language":  "ta-IN",
+    "enabled_languages":  [
+                              "ta-IN",
+                              "en-IN"
+                          ],
+    "_comment_languages":  "This shop is adding English. The en-IN block below is intentionally PARTIAL: anything missing falls back to the ta-IN block (default_language). Fill the rest whenever; the engine already works.",
+    "voice_provider":  "elevenlabs",
+    "_comment_voice_ids": "TODO(user): paste real ElevenLabs voice ids into each languages.<code>.voice.options.<gender>.voice_id; REPLACE_ values are unusable placeholders.",
+    "languages":  {
+                      "ta-IN":  {
+                                    "voice":  {
+                                                  "selected":  "female",
+                                                  "options":  {
+                                                                  "female":  {
+                                                                                 "voice_id":  "REPLACE_WITH_VOICE_ID_TA_F_2"
+                                                                             },
+                                                                  "male":  {
+                                                                               "voice_id":  "REPLACE_WITH_VOICE_ID_TA_M_2"
+                                                                           }
+                                                              }
+                                              },
+                                    "persona":  "Polite, patient Tamil assistant, speaks clearly, repeats the list back before ending.",
+                                    "greeting":  "வணக்கம்! Lakshmi Provision Store. உங்களுக்கு என்ன பொருள் வேணும்?",
+                                    "closing":  "நன்றி! உங்க order owner-கிட்ட போயிருக்கு. அவங்க confirm பண்ணுவாங்க.",
+                                    "delivery_notice":  "Delivery நேரம் owner approve பண்ணினப்புறம் சொல்லுவாங்க.",
+                                    "agent_may_say_after_order":  "உங்க list கிடைச்சிடுச்சு. Stock, price, delivery owner confirm பண்ணுவாங்க.",
+                                    "products":  {
+                                                     "rice_ponni":  {
+                                                                        "display_name":  "பொன்னி அரிசி",
+                                                                        "aliases":  [
+                                                                                        "ponni arisi",
+                                                                                        "arisi",
+                                                                                        "rice"
+                                                                                    ]
+                                                                    },
+                                                     "oil_sunflower":  {
+                                                                           "display_name":  "சூரியகாந்தி எண்ணெய்",
+                                                                           "aliases":  [
+                                                                                           "oil",
+                                                                                           "ennai",
+                                                                                           "sunflower ennai"
+                                                                                       ]
+                                                                       },
+                                                     "chilli_powder":  {
+                                                                           "display_name":  "மிளகாய் தூள்",
+                                                                           "aliases":  [
+                                                                                           "milagai thool",
+                                                                                           "milahai thool"
+                                                                                       ]
+                                                                       }
+                                                 },
+                                    "dashboard_customer_text":  {
+                                                                    "order_received":  "உங்க list கிடைச்சிடுச்சு. Owner confirm பண்ணுவாங்க.",
+                                                                    "order_confirmed":  "உங்க order confirm ஆயிடுச்சு!",
+                                                                    "out_for_delivery":  "உங்க order delivery-க்கு கிளம்பிடுச்சு."
+                                                                }
+                                },
+                      "en-IN":  {
+                                    "_comment_partial":  "Partial on purpose. Missing keys (closing, delivery_notice, most products, dashboard text) fall back to the ta-IN block at runtime until the owner fills them in. Voice is filled here: this block picks the male English voice.",
+                                    "voice":  {
+                                                  "selected":  "male",
+                                                  "options":  {
+                                                                  "female":  {
+                                                                                 "voice_id":  "REPLACE_WITH_VOICE_ID_EN_F_2"
+                                                                             },
+                                                                  "male":  {
+                                                                               "voice_id":  "REPLACE_WITH_VOICE_ID_EN_M_2"
+                                                                           }
+                                                              }
+                                              },
+                                    "persona":  "Polite, patient English assistant with a neutral Indian accent, speaks clearly, repeats the list back before ending.",
+                                    "greeting":  "Hello! Lakshmi Provision Store. What would you like to order?",
+                                    "products":  {
+                                                     "rice_ponni":  {
+                                                                        "display_name":  "Ponni Rice",
+                                                                        "aliases":  [
+                                                                                        "ponni rice",
+                                                                                        "rice"
+                                                                                    ]
+                                                                    }
+                                                 }
+                                }
+                  },
+    "products":  [
+                     {
+                         "sku":  "rice_ponni",
+                         "unit":  "kg",
+                         "allowed_units":  [
+                                               "kg"
+                                           ],
+                         "price":  62,
+                         "price_visibility":  "owner_only",
+                         "options":  [
+                                         {
+                                             "key":  "pack",
+                                             "values":  [
+                                                            "1",
+                                                            "5",
+                                                            "10",
+                                                            "25"
+                                                        ],
+                                             "required":  false
+                                         }
+                                     ]
+                     },
+                     {
+                         "sku":  "oil_sunflower",
+                         "unit":  "litre",
+                         "allowed_units":  [
+                                               "litre",
+                                               "pouch"
+                                           ],
+                         "price":  140,
+                         "price_visibility":  "customer_ok",
+                         "_comment_price":  "Here the owner allows the agent to read the listed price. Still no stock or delivery promise.",
+                         "options":  [
+
+                                     ]
+                     },
+                     {
+                         "sku":  "chilli_powder",
+                         "unit":  "packet",
+                         "allowed_units":  [
+                                               "packet",
+                                               "gram"
+                                           ],
+                         "price":  55,
+                         "price_visibility":  "never_show",
+                         "options":  [
+
+                                     ]
+                     }
+                 ],
+    "required_fields":  {
+                            "customer_name":  {
+                                                  "required":  true
+                                              },
+                            "phone":  {
+                                          "required":  true
+                                      },
+                            "address":  {
+                                            "required":  true,
+                                            "parts":  [
+                                                          "house_no",
+                                                          "street",
+                                                          "area",
+                                                          "landmark",
+                                                          "pincode"
+                                                      ],
+                                            "must_have":  [
+                                                              "house_no",
+                                                              "street",
+                                                              "area",
+                                                              "pincode"
+                                                          ]
+                                        }
+                        },
+    "delivery":  {
+                     "options":  [
+                                     "home_delivery",
+                                     "pickup"
+                                 ],
+                     "default":  "home_delivery",
+                     "service_area_note":  "Owner checks area",
+                     "requested_time_allowed":  true
+                 },
+    "payment":  {
+                    "options":  [
+                                    "cash_on_delivery",
+                                    "upi",
+                                    "pay_at_pickup"
+                                ],
+                    "ask_preference":  true
+                },
+    "whatsapp_enquiry_number":  "+919800000002",
+    "statuses":  [
+                     "DRAFT",
+                     "NEEDS_DETAILS",
+                     "AWAITING_MERCHANT_APPROVAL",
+                     "CONFIRMED",
+                     "READY_FOR_DELIVERY",
+                     "COMPLETED"
+                 ],
+    "status_flow":  {
+                        "DRAFT":  [
+                                      "NEEDS_DETAILS",
+                                      "AWAITING_MERCHANT_APPROVAL"
+                                  ],
+                        "NEEDS_DETAILS":  [
+                                              "AWAITING_MERCHANT_APPROVAL"
+                                          ],
+                        "AWAITING_MERCHANT_APPROVAL":  [
+                                                           "CONFIRMED",
+                                                           "NEEDS_DETAILS"
+                                                       ],
+                        "CONFIRMED":  [
+                                          "READY_FOR_DELIVERY"
+                                      ],
+                        "READY_FOR_DELIVERY":  [
+                                                   "COMPLETED"
+                                               ],
+                        "COMPLETED":  [
+
+                                      ]
+                    },
+    "rules":  {
+                  "agent_never_confirms":  [
+                                               "stock",
+                                               "price",
+                                               "delivery"
+                                           ],
+                  "unknown_item_action":  "note_as_free_text_and_flag",
+                  "max_items_per_order":  60,
+                  "owner_approval_required":  true,
+                  "repeat_list_before_end":  true
+              }
+}

@@ -1,0 +1,108 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : 25 November 2026 23:21:22
+   Source : D:\My-Projects\Ai-Call-Voice-Agent\
+     Dest : C:\wamp64\www\voiceshop\
+
+    Files : *.*
+	    
+ Exc Dirs : .git
+	    verification
+	    node_modules
+	    
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /R:1 /W:1 
+
+------------------------------------------------------------------------------
+
+	  New Dir          5	D:\My-Projects\Ai-Call-Voice-Agent\
+	    New File  		      73	.gitignore100%  
+	    New File  		     617	bootstrap.php100%  
+	    New File  		    9036	README.md100%  
+	    New File  		   34870	Task-101.txt100%  
+	    New File  		   11968	VERIFICATION.md100%  
+	  New Dir          2	D:\My-Projects\Ai-Call-Voice-Agent\config\
+	    New File  		     348	env.example.php100%  
+	    New File  		     356	env.php100%  
+	  New Dir          2	D:\My-Projects\Ai-Call-Voice-Agent\config\shops\
+	    New File  		   14002	grocery_store_02.json100%  
+	    New File  		   11996	panipuri_stall_01.json100%  
+	  New Dir          1	D:\My-Projects\Ai-Call-Voice-Agent\database\
+	    New File  		    2221	schema.sql100%  
+	  New Dir          3	D:\My-Projects\Ai-Call-Voice-Agent\public\
+	    New File  		      64	import.php100%  
+	    New File  		     366	index.php100%  
+	    New File  		      63	setup.php100%  
+	  New Dir          0	D:\My-Projects\Ai-Call-Voice-Agent\public\assets\
+	  New Dir          1	D:\My-Projects\Ai-Call-Voice-Agent\public\assets\css\
+	    New File  		    3733	app.css100%  
+	  New Dir          1	D:\My-Projects\Ai-Call-Voice-Agent\public\assets\js\
+	    New File  		     308	import.js100%  
+	  New Dir          0	D:\My-Projects\Ai-Call-Voice-Agent\src\
+	  New Dir          5	D:\My-Projects\Ai-Call-Voice-Agent\src\Config\
+	    New File  		     195	ConfigException.php100%  
+	    New File  		    8127	ConfigValidator.php100%  
+	    New File  		    1710	FileShopConfigRepository.php100%  
+	    New File  		     157	ShopConfigRepositoryInterface.php100%  
+	    New File  		     225	ValidationResult.php100%  
+	  New Dir          2	D:\My-Projects\Ai-Call-Voice-Agent\src\Db\
+	    New File  		     693	Database.php100%  
+	    New File  		     430	Migrator.php100%  
+	  New Dir          1	D:\My-Projects\Ai-Call-Voice-Agent\src\Domain\
+	    New File  		     557	StatusFlow.php100%  
+	  New Dir          3	D:\My-Projects\Ai-Call-Voice-Agent\src\Http\
+	    New File  		    7052	App.php100%  
+	    New File  		     388	Csrf.php100%  
+	    New File  		     481	View.php100%  
+	  New Dir          1	D:\My-Projects\Ai-Call-Voice-Agent\src\Language\
+	    New File  		    1277	LanguageResolver.php100%  
+	  New Dir          4	D:\My-Projects\Ai-Call-Voice-Agent\src\Repository\
+	    New File  		     812	OrderItemRepository.php100%  
+	    New File  		    2378	OrderRepository.php100%  
+	    New File  		     583	ShopRepository.php100%  
+	    New File  		     580	StatusLogRepository.php100%  
+	  New Dir          8	D:\My-Projects\Ai-Call-Voice-Agent\src\Service\
+	    New File  		    2230	DemoSeeder.php100%  
+	    New File  		     170	IntakeResult.php100%  
+	    New File  		     809	MissingFieldsDetector.php100%  
+	    New File  		    2479	OrderEditService.php100%  
+	    New File  		    2576	OrderIntakeService.php100%  
+	    New File  		    2439	OrderPresenter.php100%  
+	    New File  		    1583	OrderStatusService.php100%  
+	    New File  		    4051	PayloadValidator.php100%  
+	  New Dir          4	D:\My-Projects\Ai-Call-Voice-Agent\src\Voice\
+	    New File  		     484	ElevenLabsProvider.php100%  
+	    New File  		     413	VoiceProviderFactory.php100%  
+	    New File  		     199	VoiceProviderInterface.php100%  
+	    New File  		     818	VoiceResolver.php100%  
+	  New Dir          0	D:\My-Projects\Ai-Call-Voice-Agent\storage\
+	  New Dir          1	D:\My-Projects\Ai-Call-Voice-Agent\storage\logs\
+	    New File  		     288	language.log100%  
+	  New Dir          3	D:\My-Projects\Ai-Call-Voice-Agent\tests\
+	    New File  		    7041	http_tests.php100%  
+	    New File  		     662	integration.php100%  
+	    New File  		   12003	run_tests.php100%  
+	  New Dir          7	D:\My-Projects\Ai-Call-Voice-Agent\views\
+	    New File  		    5714	detail.php100%  
+	    New File  		     286	error.php100%  
+	    New File  		    1298	health.php100%  
+	    New File  		    1267	import.php100%  
+	    New File  		    1737	layout.php100%  
+	    New File  		    1190	orders.php100%  
+	    New File  		     399	setup.php100%  
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :        22        21         1         0         0         0
+   Files :        54        54         0         0         0         0
+   Bytes :   161.9 k   161.9 k         0         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   Speed :              652763 Bytes/sec.
+   Speed :              37.351 MegaBytes/min.
+   Ended : 25 November 2026 23:21:22
+

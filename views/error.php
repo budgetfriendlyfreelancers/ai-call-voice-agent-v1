@@ -1,0 +1,1 @@
+<h1>Unable to complete this action</h1><p>Correct the issue above and retry. No invalid config is loaded.</p><div class="row"><a class="button" href="index.php?page=health">Config Health</a><a class="button" href="setup.php">Setup</a><a class="button" href="index.php">Orders</a></div>

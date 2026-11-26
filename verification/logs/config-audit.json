@@ -1,0 +1,116 @@
+﻿{
+    "grocery_store_02": {
+        "shop_name": "Lakshmi Provision Store",
+        "checks": {
+            "Required top-level keys": "PASS",
+            "Enabled languages have blocks": "PASS",
+            "Default language is enabled": "PASS",
+            "Default language complete": "PASS",
+            "Language product keys match SKUs": "PASS",
+            "Selected gender exists": "PASS",
+            "Default product display names": "PASS",
+            "Price visibility valid": "PASS",
+            "Exactly six agreed statuses": "PASS",
+            "Status flow uses agreed codes": "PASS",
+            "Address must_have subset": "PASS",
+            "DB registry matches stripped config": "PASS"
+        },
+        "validator_errors": [],
+        "validator_warnings": [
+            "ta-IN\/female: unfilled voice_id (REPLACE_WITH_VOICE_ID_TA_F_2).",
+            "ta-IN\/male: unfilled voice_id (REPLACE_WITH_VOICE_ID_TA_M_2).",
+            "en-IN\/female: unfilled voice_id (REPLACE_WITH_VOICE_ID_EN_F_2).",
+            "en-IN\/male: unfilled voice_id (REPLACE_WITH_VOICE_ID_EN_M_2)."
+        ],
+        "voices": [
+            {
+                "language": "ta-IN",
+                "gender": "female",
+                "voice_id": "REPLACE_WITH_VOICE_ID_TA_F_2",
+                "status": "WARN \/ unusable placeholder"
+            },
+            {
+                "language": "ta-IN",
+                "gender": "male",
+                "voice_id": "REPLACE_WITH_VOICE_ID_TA_M_2",
+                "status": "WARN \/ unusable placeholder"
+            },
+            {
+                "language": "en-IN",
+                "gender": "female",
+                "voice_id": "REPLACE_WITH_VOICE_ID_EN_F_2",
+                "status": "WARN \/ unusable placeholder"
+            },
+            {
+                "language": "en-IN",
+                "gender": "male",
+                "voice_id": "REPLACE_WITH_VOICE_ID_EN_M_2",
+                "status": "WARN \/ unusable placeholder"
+            }
+        ],
+        "resolved": {
+            "ta-IN": {
+                "provider": "elevenlabs",
+                "gender": "female",
+                "voice_id": "REPLACE_WITH_VOICE_ID_TA_F_2",
+                "language": "ta-IN",
+                "fallback": true,
+                "placeholder": true
+            },
+            "en-IN": {
+                "provider": "elevenlabs",
+                "gender": "female",
+                "voice_id": "REPLACE_WITH_VOICE_ID_TA_F_2",
+                "language": "ta-IN",
+                "fallback": true,
+                "placeholder": true
+            }
+        }
+    },
+    "panipuri_stall_01": {
+        "shop_name": "Anna Masala Puri Stall",
+        "checks": {
+            "Required top-level keys": "PASS",
+            "Enabled languages have blocks": "PASS",
+            "Default language is enabled": "PASS",
+            "Default language complete": "PASS",
+            "Language product keys match SKUs": "PASS",
+            "Selected gender exists": "PASS",
+            "Default product display names": "PASS",
+            "Price visibility valid": "PASS",
+            "Exactly six agreed statuses": "PASS",
+            "Status flow uses agreed codes": "PASS",
+            "Address must_have subset": "PASS",
+            "DB registry matches stripped config": "PASS"
+        },
+        "validator_errors": [],
+        "validator_warnings": [
+            "ta-IN\/female: unfilled voice_id (REPLACE_WITH_VOICE_ID_TA_F).",
+            "ta-IN\/male: unfilled voice_id (REPLACE_WITH_VOICE_ID_TA_M)."
+        ],
+        "voices": [
+            {
+                "language": "ta-IN",
+                "gender": "female",
+                "voice_id": "REPLACE_WITH_VOICE_ID_TA_F",
+                "status": "WARN \/ unusable placeholder"
+            },
+            {
+                "language": "ta-IN",
+                "gender": "male",
+                "voice_id": "REPLACE_WITH_VOICE_ID_TA_M",
+                "status": "WARN \/ unusable placeholder"
+            }
+        ],
+        "resolved": {
+            "ta-IN": {
+                "provider": "elevenlabs",
+                "gender": "female",
+                "voice_id": "REPLACE_WITH_VOICE_ID_TA_F",
+                "language": "ta-IN",
+                "fallback": true,
+                "placeholder": true
+            }
+        }
+    }
+}

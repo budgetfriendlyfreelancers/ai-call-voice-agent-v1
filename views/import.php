@@ -1,0 +1,6 @@
+<?php use VoiceShop\Http\Csrf; ?>
+<h1>Import an order</h1><div class="notice"><strong>FUTURE WEBHOOK ENTRY POINT — manual simulator</strong> — paste order JSON here. The live ElevenLabs endpoint at <code>webhook/elevenlabs.php</code> now authenticates post-call events and uses this same order intake service.</div>
+<?php if (!empty($imported)): ?><p><a class="button" href="index.php?page=detail&id=<?= (int)$imported['id'] ?>">Open order #<?= (int)$imported['id'] ?></a></p><?php endif ?>
+<div class="row"><button type="button" data-sample="0">Sample JSON: complete</button><button type="button" data-sample="1">Sample JSON: missing fields</button></div>
+<form method="post"><input type="hidden" name="csrf" value="<?= $e(Csrf::token()) ?>"><label>Fallback shop (JSON shop_id wins)<select name="shop_id"><?php foreach ($shops as $id => $c): ?><option value="<?= $e($id) ?>"><?= $e($c['shop_name']) ?></option><?php endforeach ?></select></label><label>Order JSON<textarea id="payload" name="payload" rows="22" required spellcheck="false"><?= $e($payload) ?></textarea></label><button>Import order</button></form>
+<script type="application/json" id="samples"><?= json_encode($samples, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?></script><script src="assets/js/import.js" defer></script>

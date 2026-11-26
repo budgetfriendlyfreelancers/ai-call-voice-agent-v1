@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Date: Wed, 25 Nov 2026 17:55:44 GMT
+Server: Apache/2.4.62 (Win64) PHP/8.1.31 mod_fcgid/2.3.10-dev
+Last-Modified: Wed, 25 Nov 2026 17:35:48 GMT
+ETag: "134-6611d41f0f9b7"
+Accept-Ranges: bytes
+Content-Length: 308
+Content-Type: text/javascript
+
